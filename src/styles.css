@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+li{
+  background-color: cadetblue;
+  float: left;
+  list-style-type: none;
+}
+a{
+  display: block;
+  padding: 10px;
+}

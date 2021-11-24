@@ -1,0 +1,52 @@
+<h1>Internal Directives Demo</h1>
+<h4>NgClass</h4>
+static values <br>
+<div ngClass="yellow">
+  i am Ngclass Directives
+</div>
+
+2)property binding variable
+<div [ngClass]="divClasses">
+  i am Ngclass Directives
+</div>
+3)property binding function
+<div [ngClass]="getClasses()">
+  i am Ngclass Directives
+</div>
+4)property binding expression
+<div [ngClass]="error?'yellow':'red'">
+  i am Ngclass Directives
+</div>
+<hr>
+
+<h4>NgStyle</h4>
+<div [ngStyle]="{'font-size':styleprop}">
+  Im checking ng style
+</div>
+<div [ngStyle]="{'color':error?'red':'green'}">
+  Im checking ng style
+</div>
+<div [ngStyle]="ngStyleObject">
+  Im checking ng style
+</div>
+<hr>
+<h4>NgModel</h4>
+User Detailsbr
+You must import FormsModule in app module.ts <br>
+
+<input type="text" [(ngModel)]="fname">{{fname}}<br>
+<input type="text" [ngModel]="email">{{email}}<br>
+<br><br>
+Form with object model <br>
+<input type="text" [(ngModel)]="formData.fname"><br>
+<input type="text" [(ngModel)]="formData.email"><br>
+Form Data:{{formData | json}}
+<!-- " | json" is pipe concept which convert formData into json data -->
+<br><br><br>
+<div [ngStyle]="{'font-size':GetSize(fontSize)}">
+        Dynamic font size demo
+</div>
+
+<input type="range" [(ngModel)]="fontSize" min="10" max="100"  >
+
+

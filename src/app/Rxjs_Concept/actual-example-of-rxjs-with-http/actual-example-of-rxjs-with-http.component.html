@@ -1,0 +1,6 @@
+<h1>RxJs Demo</h1>
+<button (click)="getUsers()">Get Users</button>
+<br>
+<div *ngFor="let user of users" >
+    {{user.id}} - {{user.name}} - {{user.email}}<br>
+</div>
